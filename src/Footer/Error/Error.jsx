@@ -12,14 +12,13 @@ const Error = () => {
     return (
         <div className='h-[800px] flex justify-center items-center'>
             <div className='h-[400px] w-[400px] bg-[#24788F] flex justify-center items-center text-white text-center rounded-2xl'>
-                <div className='text-6xl font-bold'>
+                <div className='text-8xl font-bold'>
                     <Typewriter
-                        className=''
                         words={['404']}
                         loop={5}
                         cursor
                         cursorStyle='!'
-                        typeSpeed={500}
+                        typeSpeed={200}
                         deleteSpeed={100}
                         delaySpeed={1000}
                         onLoopDone={handleDone}

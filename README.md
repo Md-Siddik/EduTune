@@ -1,7 +1,7 @@
 # EduTune
 
 # Used Package
-- TailwindCSS
 - DaisyUI
+- React Router
 - React Icons
 - React-Simple-TypeWriter

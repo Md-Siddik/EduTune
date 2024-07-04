@@ -1,29 +1,66 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { MdCall } from "react-icons/md";
 import { IoSearch } from "react-icons/io5";
 
 const Navbar = () => {
 
     const navLinks = <>
+        <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/pre_schooling'>Pre-Schooling</NavLink></li>
         <li><NavLink to='/kid_courses'>Kid`s Courses</NavLink></li>
         <li><NavLink to='/admission'>Admission</NavLink></li>
         <li><NavLink to='/about'>About</NavLink></li>
-        <li><NavLink to='/login'>Login</NavLink></li>
+        <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
     </>
 
     return (
-        <div>
-            <div className="navbar bg-base-100">
-                <div className="flex-1">
-                    <a className="btn btn-ghost text-xl">edu<span className="text-orange-400 ml-[-7px]">tune</span></a>
+        <div className="lg:container">
+            <div className="navbar justify-between">
+                <div className="navbar-start max-sm:w-full md:w-full">
+                    <div className="dropdown max-lg:w-full">
+                        <div className="max-lg:flex max-lg:justify-between">
+                            <a className="btn btn-ghost text-xl">daisyUI</a>
+                            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-5 w-5"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M4 6h16M4 12h8m-8 6h16" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div className="max-lg:flex max-lg:justify-end">
+                            <ul
+                                tabIndex={0}
+                                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] w-fit p-2 shadow">
+                                {navLinks}
+                                <div className="pl-3">
+                                    <MdCall className="text-orange-400 text-xl mb-2" />
+                                    <button><IoSearch /></button>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div className="flex-none gap-5">
+                <div className="navbar-center hidden lg:flex gap-4">
                     <ul className="menu menu-horizontal px-1">
                         {navLinks}
                     </ul>
-                    <MdCall className="text-orange-400"/>
-                    <IoSearch />
+                    <div>
+                        <Link to='/login'>
+                            <button className="btn btn-outline">Login</button>
+                        </Link>
+                    </div>
+                    <div className="flex items-center gap-4">
+                        <MdCall className="text-orange-400 text-xl" />
+                        <button><IoSearch /></button>
+                    </div>
                 </div>
             </div>
         </div>

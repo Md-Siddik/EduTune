@@ -1,8 +1,13 @@
+import Banner from "../Banner/Banner";
+import Course from "../Course/Course";
+import Subscribe from "../Subscribe/Subscribe";
 
 const Home = () => {
     return (
         <div>
-            <h1 className="text-6xl">This is home page.</h1>
+            <Banner></Banner>
+            <Course></Course>
+            <Subscribe></Subscribe>
         </div>
     );
 };

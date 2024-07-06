@@ -37,6 +37,9 @@ const Login = () => {
                             confirmButtonText: 'Great'
                         })
                         navigate('/dashboard');
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 400);
                     }
                     else {
                         Swal.fire({

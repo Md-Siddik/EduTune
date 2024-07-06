@@ -13,16 +13,16 @@ const Navbar = () => {
 
     useEffect(() => {
         userData?.map(user => setId(user._id));
-    } ,[userData])
-    
+    }, [userData])
+
     const [user, setUser] = useState();
 
     useEffect(() => {
         userData?.map(user => setUser(user));
-    } ,[userData])
-    
-    
-    console.log(user?.user);
+    }, [userData])
+
+
+    // console.log(user?.user);
 
     // const handleUpdate = () => {
     //     const userLogin = user?.user === 'true' ? 'false' : 'true';
@@ -41,7 +41,7 @@ const Navbar = () => {
     // }
 
     const handleUpdate = () => {
-        const userLogin = {user: 'false'};
+        const userLogin = { user: 'false' };
 
         fetch(`http://localhost:5000/user/${id}`, {
             method: 'PUT',
@@ -52,8 +52,12 @@ const Navbar = () => {
         })
             .then((res) => res.json())
             .then((data) => {
+                console.log(data);
                 if (data.modifiedCount > 0) {
                     navigate('/login');
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 400);
                 }
             });
     }
@@ -74,7 +78,7 @@ const Navbar = () => {
         </li> */}
         <li>
             {
-                user?.user == 'true' ? <button onClick={ handleUpdate }>Logout</button> : <NavLink to='/login'>Login</NavLink>
+                user?.user == 'true' ? <button onClick={handleUpdate}>Logout</button> : <NavLink to='/login'>Login</NavLink>
             }
         </li>
     </>

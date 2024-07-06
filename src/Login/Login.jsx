@@ -19,7 +19,7 @@ const Login = () => {
 
         const userLogin = { user: user === 'true' ? 'false' : 'true' };
 
-        fetch(`http://localhost:5000/user/${_id}`, {
+        fetch(`https://edutune-server.vercel.app/user/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',
@@ -62,7 +62,7 @@ const Login = () => {
 
 
 
-        // fetch(`http://localhost:5000/user/${id}`, {
+        // fetch(`https://edutune-server.vercel.app/user/${id}`, {
         //     method: 'PUT',
         //     headers: {
         //         'content-type': 'application/json'

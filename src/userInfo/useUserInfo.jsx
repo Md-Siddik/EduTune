@@ -4,7 +4,7 @@ const useUserInfo = () => {
     const [userData, setUserData] = useState();
 
     useEffect(() => {
-        fetch('http://localhost:5000/user')
+        fetch('https://edutune-server.vercel.app/user')
             .then((res) => res.json())
             .then((data) => {
                 // const [singleUser] = data;

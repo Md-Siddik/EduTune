@@ -21,7 +21,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/course')
+        loader: () => fetch('https://edutune-server.vercel.app/course')
       },
       {
         path: "/pre_schooling",
@@ -30,17 +30,17 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
-        loader: () => fetch('http://localhost:5000/user')
+        loader: () => fetch('https://edutune-server.vercel.app/user')
       },
       {
         path: "/dashboard",
         element: <Dashboard></Dashboard>,
-        loader: () => fetch('http://localhost:5000/course')
+        loader: () => fetch('https://edutune-server.vercel.app/course')
       },
       {
         path: "/update/:id",
         element: <Update></Update>,
-        loader: ({params}) => fetch(`http://localhost:5000/course/${params.id}`)
+        loader: ({params}) => fetch(`https://edutune-server.vercel.app/course/${params.id}`)
       }
     ]
   },

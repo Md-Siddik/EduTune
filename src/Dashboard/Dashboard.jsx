@@ -28,7 +28,7 @@ const Dashboard = () => {
         const newCourse = { title, thumbnail, duration, duration_status, live_status, fees, category, description, available };
 
         // Send data to the server
-        fetch('http://localhost:5000/course', {
+        fetch('https://edutune-server.vercel.app/course', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -59,7 +59,7 @@ const Dashboard = () => {
                             <tr className="text-lg text-black">
                                 <th>Thumbnail</th>
                                 <th>Title</th>
-                                <th>Description</th>
+                                <th className="max-sm:hidden">Description</th>
                                 <th></th>
                                 <th>Available Status</th>
                             </tr>

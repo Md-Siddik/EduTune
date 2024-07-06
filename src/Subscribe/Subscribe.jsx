@@ -5,7 +5,7 @@ const Subscribe = () => {
         <div className="bg-gray-100">
             <div className="w-fit mx-auto flex max-sm:flex-col gap-7 py-20">
                 <div className="text-right">
-                    <h1 className="text-4xl font-bold">Subscribe to Newsletter</h1>
+                    <h1 className="text-4xl max-sm:text-3xl font-bold">Subscribe to Newsletter</h1>
                     <p className="w-[380px] float-right my-3">Subscribe free and get the notification and latest offers of our courses.</p>
                 </div>
                 <div className="w-[90px] max-sm:hidden">

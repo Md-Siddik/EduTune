@@ -20,7 +20,7 @@ const Banner = () => {
                 </div>
                 <div className="lg:w-1/2 p-10 max-sm:pb-16">
                     <h2 className="text-[18px] font-bold text-orange-500">এডুকেশন উইথ কেয়ার</h2>
-                    <h1 className="text-[28px] font-bold pr-24">সেরা প্রশিক্ষকদের সাথে আপনার শিক্ষা টিউন করুন</h1>
+                    <h1 className="text-[28px] max-sm:text-[24px] font-bold pr-24">সেরা প্রশিক্ষকদের সাথে আপনার শিক্ষা টিউন করুন</h1>
                     <p className="pr-4 my-4">একাডেমিক থেকে দক্ষতা উন্নয়নে এডুটিউন আছে আপনার শিক্ষকে আরও সহজ করতে। শিক্ষারথীদের গাণিতিক, মানসিক, প্রযুক্তিগত এবং ভাশাগত দক্ষতা বৃদ্ধি করে তাদেরকে চতুর্থ শিল্প বিপ্লবের একজন যোগ্য নাগরিক হিসাবে গড়ে তোলাই আমাদের প্রধান লক্ষ্য।</p>
                     <div>
                         <form className="flex items-center pl-4 join border bg-white">

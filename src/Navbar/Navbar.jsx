@@ -27,7 +27,7 @@ const Navbar = () => {
     // const handleUpdate = () => {
     //     const userLogin = user?.user === 'true' ? 'false' : 'true';
 
-    //     fetch(`http://localhost:5000/user/${id}`, {
+    //     fetch(`https://edutune-server.vercel.app/user/${id}`, {
     //         method: 'PUT',
     //         headers: {
     //             'content-type': 'application/json',
@@ -43,7 +43,7 @@ const Navbar = () => {
     const handleUpdate = () => {
         const userLogin = { user: 'false' };
 
-        fetch(`http://localhost:5000/user/${id}`, {
+        fetch(`https://edutune-server.vercel.app/user/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',

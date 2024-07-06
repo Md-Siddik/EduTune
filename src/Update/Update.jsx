@@ -26,7 +26,7 @@ const Update = () => {
         const newCourse = { title, thumbnail, duration, duration_status, live_status, fees, category, description, available };
 
         // Send data to the server
-        fetch(`http://localhost:5000/course/${_id}`, {
+        fetch(`https://edutune-server.vercel.app/course/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

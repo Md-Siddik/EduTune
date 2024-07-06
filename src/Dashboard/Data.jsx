@@ -12,7 +12,7 @@ const Data = ({ course }) => {
     const handleAvailable = () => {
         const avcourse = { available: available === 'true' ? 'false' : 'true' };
 
-        fetch(`http://localhost:5000/course/${_id}`, {
+        fetch(`https://edutune-server.vercel.app/course/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',
@@ -38,7 +38,7 @@ const Data = ({ course }) => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/course/${_id}`, {
+                fetch(`https://edutune-server.vercel.app/course/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -75,7 +75,7 @@ const Data = ({ course }) => {
             <td className="">
                 <h1 className="text-[17px] font-bold">{title}</h1>
             </td>
-            <td className="max-w-[600px]">{description}</td>
+            <td className="max-w-[600px] max-sm:hidden">{description}</td>
             <td>
                 <div className="w-fit mx-auto flex gap-4">
                     <Link to={`/update/${_id}`}>

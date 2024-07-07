@@ -43,7 +43,6 @@ const Data = ({ course }) => {
                 })
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data);
                         if (data.deletedCount > 0) {
                             Swal.fire({
                                 title: "Deleted!",
@@ -82,7 +81,7 @@ const Data = ({ course }) => {
                         <button className="py-2 px-3 bg-gray-500 text-white bg-green-500">Update</button>
                     </Link>
                     <button onClick={() => handleDelete(_id)} className="py-2 px-3 bg-gray-500 text-white bg-red-500">Delete</button>
-                    <Link to={`/course/${_id}`}>
+                    <Link to={`/details/${_id}`}>
                         <button className="py-2 px-3 bg-gray-500 text-white bg-sky-500">View</button>
                     </Link>
                 </div>

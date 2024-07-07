@@ -3,10 +3,10 @@ import Swal from "sweetalert2";
 
 const Update = () => {
 
-    const allCourses = useLoaderData();
-    const { _id, title, thumbnail, duration, duration_status, live_status, fees, category, description } = allCourses;
+    const singleCourse = useLoaderData();
+    const { _id, title, thumbnail, duration, duration_status, live_status, fees, category, description } = singleCourse;
 
-    console.log(allCourses)
+    console.log(singleCourse)
 
     const handleUpdate = event => {
         event.preventDefault();

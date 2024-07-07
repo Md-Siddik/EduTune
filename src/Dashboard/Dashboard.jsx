@@ -8,7 +8,6 @@ const Dashboard = () => {
     const navigate = useNavigate();
 
     const category = allCourses?.filter(course => course.category)
-    // console.log(category)
     
     const handleAddCourse = event => {
         event.preventDefault();

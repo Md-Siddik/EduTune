@@ -22,7 +22,6 @@ const Navbar = () => {
     }, [userData])
 
 
-    // console.log(user?.user);
 
     // const handleUpdate = () => {
     //     const userLogin = user?.user === 'true' ? 'false' : 'true';
@@ -52,7 +51,6 @@ const Navbar = () => {
         })
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
                 if (data.modifiedCount > 0) {
                     navigate('/login');
                     setTimeout(() => {

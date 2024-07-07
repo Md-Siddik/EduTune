@@ -11,6 +11,7 @@ import Error from './Footer/Error/Error.jsx';
 import Login from './Login/Login.jsx';
 import Dashboard from './Dashboard/Dashboard.jsx';
 import Update from './Update/Update.jsx';
+import Details from './Details/Details.jsx';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
       {
         path: "/update/:id",
         element: <Update></Update>,
+        loader: ({params}) => fetch(`https://edutune-server.vercel.app/course/${params.id}`)
+      },
+      {
+        path: "/details/:id",
+        element: <Details></Details>,
         loader: ({params}) => fetch(`https://edutune-server.vercel.app/course/${params.id}`)
       }
     ]

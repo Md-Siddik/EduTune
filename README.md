@@ -2,7 +2,7 @@
 This is a demo website for EduTune website. The site is still in upgrade. It will make some more upgrades.
 
 # Getting Started
-- Live link : https://edutune-9894d.web.app/
+- Live link : https://edutune-9894d.web.app/ (It's taking little long time to view the website. Wait for some minutes and reload to see the live preview. It's the problem of free hosting.)
 
 # View code and run in localhost
 1. Clone or download client side repository ( https://github.com/Md-Siddik/EduTune )
